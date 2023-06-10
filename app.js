@@ -94,3 +94,10 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(skillBar[0]);
+
+
+// preloder
+window.onload = function() {
+  const preloader = document.getElementById("loader");
+ preloader.style.display = "none";
+}

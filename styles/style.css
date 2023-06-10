@@ -61,6 +61,21 @@ nav ul li a:hover {
 
 
 }
+.preloder{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--background-color);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloder img{
+  height: 10%;
+}
 .res-nav {
   position: fixed;
   top: 0%;
@@ -1206,9 +1221,7 @@ align-items: start;
   .res-nav li a:hover img{
     scale: .9;
   }
-  .logo{
-    display: none;
-  }
+
   .about .mr-hero{
     height: 270px;
     border-radius: 40%;
