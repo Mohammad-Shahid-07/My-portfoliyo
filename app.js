@@ -90,7 +90,7 @@ const observer = new IntersectionObserver((entries) => {
           } else {
             skillBarLength[
               index
-            ].style.width = `calc(${output[index]}%* 0.077868852)`;
+            ].style.width = `calc(${output[index]}%* 0.7077868852)`;
           }
           if (output[index] <= bar) {
             output[index]++;
