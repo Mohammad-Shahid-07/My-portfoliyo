@@ -1,4 +1,3 @@
-
 const mrHero = document.querySelector(".section-heading");
 const intro = document.querySelector(".intro");
 const dev = document.querySelector(".dev");
@@ -79,9 +78,20 @@ const observer = new IntersectionObserver((entries) => {
       const timer = setInterval(() => {
         skillPercent.forEach((bar, index) => {
           skillBar[index].innerHTML = output[index] + "%";
-          skillBarLength[
-            index
-          ].style.width = `calc(${output[index]}%* 0.7077868852)`;
+          if (window.innerWidth <= 500) {
+            skillBarLength[
+              index
+            ].style.width = `calc(${output[index]}%* 0.5585996409335727)`;
+          } 
+          else if (window.innerWidth <= 600) {
+            skillBarLength[
+              index
+            ].style.width = `calc(${output[index]}%* 0.6385996409335727)`;
+          } else {
+            skillBarLength[
+              index
+            ].style.width = `calc(${output[index]}%* 0.077868852)`;
+          }
           if (output[index] <= bar) {
             output[index]++;
           } else if (output[index] === bar) {
@@ -95,9 +105,8 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(skillBar[0]);
 
-
 // preloder
-window.onload = function() {
+window.onload = function () {
   const preloader = document.getElementById("loader");
- preloader.style.display = "none";
-}
+  preloader.style.display = "none";
+};

@@ -784,6 +784,9 @@ p {
   -ms-transform: translate(50px, 18px);
   -o-transform: translate(50px, 18px);
 }
+#skills > div.skills-container > div:nth-child(2) > div:nth-child(3) > img{
+  margin-right: 15px;
+}
 .skill-bar-box {
   position: absolute;
 
@@ -813,9 +816,7 @@ p {
 
 .skill-bar-img {
   height: 50px;
-  width: 50px;
-  /* margin-left: -10px; */
-  /* padding: 20px; */
+
 }
 .skill-bar-box {
   transition: width 0.3s ease-in-out;
@@ -1177,12 +1178,7 @@ align-items: start;
 
 
 
-  .skill-bar-line {
-    width: 60vw;
-  }
-  .skill-bar-box {
-    width: 40vw;
-  }
+ 
 }
 
 @media screen and (max-width: 700px) {
@@ -1260,11 +1256,42 @@ align-items: start;
     width: 100%;
     max-height: 100%;
   }
+  .skill-bar-line {
+    width: 300px;
+   }
+   .skills-container > div {
+    margin-left: 0  ;
+}
 }
 @media screen and (max-width: 500px) {
+  .res-nav {
+    width: 100%;
+  }
+
+
+  .skill-bar{
+    width: 90vw;
+  }
+  .skill-bar-line{
+    width: 250px;
+  }
+
 
 }
 
+@media screen and (max-width: 450px) {
+  .res-nav li  {
+    margin: 0;
+    padding: .5rem 0;
+  }
+
+.home-text{
+  max-width: 90vw;
+}
+ .btns{
+ display: block;
+  }
+}
 @media screen and (min-width: 1400px) {
 
 }
