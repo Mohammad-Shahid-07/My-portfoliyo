@@ -409,7 +409,7 @@ p {
   width: 40px;
 
 }
-.social-media img:hover {
+.social-media img:hover, .card-text img:hover {
   scale: 1.2;
   transition: all.3s ease;
   -webkit-transition: all.3s ease;
@@ -900,193 +900,65 @@ align-items: start;
   padding: 8px 10px;
   font-weight: 900;
   margin: 5px;
-  width: max-content;
-  margin-top: 1.5rem;
+  display: block;
+  text-align: center;
   box-shadow: 0 0 10px var(--neon-color-1), 0 0 30px var(--neon-color-1),
     0 0 50px var(--neon-color-1);
   background: linear-gradient(70deg, var(--neon-color-2), var(--neon-color-1));
 
 }
-.container {
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
-  grid-auto-rows: 300px;
-  grid-auto-flow: row dense;
-  grid-gap: 23px;
+.container{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
+.card-top{
+ width: 400px;
+ background: radial-gradient(circle at 100% 100%, transparent 0, transparent 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+           radial-gradient(circle at 0 100%, transparent 0, transparent 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+           radial-gradient(circle at 100% 0, transparent 0, transparent 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+           radial-gradient(circle at 0 0, transparent 0, transparent 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+           linear-gradient(transparent, transparent) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+           linear-gradient(transparent, transparent) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+           linear-gradient(90deg, #0a5e8c 0%, #e400f8 100%);
+ border-radius: 8px;
+  
+  animation: neon-glow 1s ease-in-out infinite alternate;
+ padding: 5px;
+ position: relative;
+ height: 600px;
+}
+@keyframes neon-glow {
+  from {
+    filter: drop-shadow(0 0 0 var(--neon-color-1));
+  }
+  to {
+    filter: drop-shadow(0 10px  10px var(--neon-color-1));
+    -webkit-filter: drop-shadow(0 10px  10px var(--neon-color-1));
+}
+}
+.card-image{
+  height: 300px;
 
-.card-top,
-.card-right,
-.card-bottom,
-.card-left {
-  display: flex;
-  flex-wrap: nowrap;
+}
+.card-top .card-image img{
+  width: 100%;
   height: 100%;
-  width: 100%;
-  border-radius: 95.2380952381px;
-  box-shadow: 0px 3px 9px 1px rgba(0, 10, 20, 0.2);
-}
-
-.card-top {
-  flex-direction: column;
-  grid-column: auto/span 1;
-  grid-row: auto/span 2;
-}
-
-.card-right {
-  flex-direction: row-reverse;
-  grid-column: auto/span 2;
-  grid-row: auto/span 1;
-}
-
-.card-bottom {
-  flex-direction: column-reverse;
-  grid-column: auto/span 1;
-  grid-row: auto/span 2;
-}
-
-.card-left {
-  flex-direction: row;
-  grid-column: auto/span 2;
-  grid-row: auto/span 1;
-}
-
-.card-image {
-  display: flex;
-  position: relative;
-}
-
-.card-top .card-image,
-.card-bottom .card-image {
-  height: 50%;
-  width: 100%;
-}
-
-.card-left .card-image,
-.card-right .card-image {
-  height: 100%;
-  width: 50%;
-}
-
-.card-image img {
-  width: 100%;
   object-fit: cover;
+  text-align: center;
+}
+.card-text img{
+  height: 35px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
 
-.card-top img {
-  border-radius: 95.2380952381px 95.2380952381px 0 0;
-}
-
-.card-right img {
-  border-radius: 0 95.2380952381px 95.2380952381px 0;
-}
-
-.card-bottom img {
-  border-radius: 0 0 95.2380952381px 95.2380952381px;
-}
-
-.card-left img {
-  border-radius: 95.2380952381px 0 0 95.2380952381px;
-}
-
-.card-text {
-  padding: 5px;
+.card-text{
+  padding: 10px;
   color: var(--secondary-color);
- 
-}
-.card-text p{
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card-top .card-text {
-  height: auto;
-  width: auto;
-  padding-bottom: 36.8px;
-}
-
-.card-right .card-text {
-  height: auto;
-  width: 50%;
-  padding-left: 36.8px;
-}
-
-.card-bottom .card-text {
-  height: auto;
-  width: auto;
-  padding-top: 36.8px;
-}
-
-.card-left .card-text {
-  height: auto;
-  width: 50%;
-  padding-right: 36.8px;
-}
-
-
-
-@media (max-width: 500px) {
-  .card-top {
-    flex-direction: row;
-    grid-column: auto/span 2;
-    grid-row: auto/span 1;
-  }
-
-  .card-bottom {
-    flex-direction: row-reverse;
-    grid-column: auto/span 2;
-    grid-row: auto/span 1;
-  }
-  .res-nav{
-    width: 100vw;
-    justify-content: space-around;
-  }
-
-  .container{
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-
-  }
-  .card-top .card-image,
-  .card-bottom .card-image {
-    height: 100%;
-    width: 50%;
-  }
-
-  .card-top img {
-    border-radius: 95.2380952381px 0 0 95.2380952381px;
-  }
-
-  .card-bottom img {
-    border-radius: 0 95.2380952381px 95.2380952381px 0;
-  }
-
-  .card-top .card-text {
-    height: auto;
-    width: 50%;
-    padding-right: 36.8px;
-  }
-
-  .card-bottom .card-text {
-    height: auto;
-    width: 50%;
-    padding-left: 36.8px;
-  }
-}
-@media (max-width: 400px) {
-  .card-image {
-    width: 38% !important;
-  }
-
-  .card-text {
-    width: 62% !important;
-  }
-}
-
-#resume object {
-  min-height: 100vh;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1138,7 +1010,14 @@ align-items: start;
   :root {
     --heading-1: 2rem;
   }
-
+  .card-top {
+    height: auto;
+  }
+  .container{
+    width: 90vw;
+    margin: 0 auto;
+    --text: 1rem;
+  }
 
   .home-img .neon-circle {
     height: 400px;
@@ -1186,9 +1065,7 @@ align-items: start;
   :root {
     --heading-1: 1rem;
   }
-  .home-img {
-    margin-right: 60px;
-  }
+  
 }
 @media screen and (max-width: 600px) {
   .home-img .neon-circle {
@@ -1200,7 +1077,10 @@ align-items: start;
     --offset: 140px;
   }
  #about .home-img{
- margin-left: 140px;
+ margin-left: -25px;
+}
+#home .home-img {
+  margin-right: 130px;
 }
   .dev {
     text-align: end;
@@ -1233,9 +1113,7 @@ align-items: start;
     -o-border-radius: 40%;
 }
 
-  .home-img {
-    margin-right: 130px;
-  }
+  
   .mr-hero {
     --size: 340px;
     top: 20px;
@@ -1266,6 +1144,7 @@ align-items: start;
 @media screen and (max-width: 500px) {
   .res-nav {
     width: 100%;
+    justify-content: space-evenly;
   }
 
 

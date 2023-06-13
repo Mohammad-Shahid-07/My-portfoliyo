@@ -98,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
             clearInterval(timer);
           }
         });
-      }, 50);
+      }, 25);
     }
   });
 });
