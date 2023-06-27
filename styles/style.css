@@ -465,11 +465,11 @@ p {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  transform: rotate(360deg);
+/*   transform: rotate(360deg);
   -webkit-transition: all;
   -moz-transition: all;
   -ms-transition: all;
-  -o-transition: all;
+  -o-transition: all; */
 }
 #home .neon-circle{
 
