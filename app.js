@@ -13,31 +13,31 @@ const socialRight = document.querySelectorAll(".right");
 //   scale: 1.2,
 //   delay: 5,
 // });
-new simpleParallax(mrHero, {
-  orientation: "down",
-  overflow: true,
-  scale: 5,
-  delay: 10,
-});
+// new simpleParallax(mrHero, {
+//   orientation: "down",
+//   overflow: true,
+//   scale: 5,
+//   delay: 10,
+// });
 
-new simpleParallax(intro, {
-  orientation: "left",
-  overflow: true,
-  scale: 3,
-  delay: 5,
-});
-// new simpleParallax(neonCircle, {
-//   orientation: "right",
+// new simpleParallax(intro, {
+//   orientation: "left",
 //   overflow: true,
 //   scale: 3,
 //   delay: 5,
 // });
-new simpleParallax(dev, {
-  orientation: "right",
-  overflow: true,
-  scale: 5,
-  delay: 5,
-});
+// // new simpleParallax(neonCircle, {
+// //   orientation: "right",
+// //   overflow: true,
+// //   scale: 3,
+// //   delay: 5,
+// // });
+// new simpleParallax(dev, {
+//   orientation: "right",
+//   overflow: true,
+//   scale: 5,
+//   delay: 5,
+// });
 
 // new simpleParallax(socialRight, {
 //   orientation: "right",
